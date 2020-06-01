@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-express-mysql",
+  "version": "1.0.0",
+  "description": "serie of apps tutorial to learn diffrent technologies and its diffrent combinations",
+  "author": "pablo javier matias jimenez",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "NodeJS",
+    "expressJS",
+    "MySql",
+    "CRUD",
+    "ABM",
+    "API"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
