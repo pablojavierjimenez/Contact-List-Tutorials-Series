@@ -1,6 +1,10 @@
+// @ts-nocheck
 
-async function getPersons (req, res) {
-  console.log('create persons list')
+module.exports = function (db) {
+  return async (req, res) => {
+    db.query("SELECT * FROM `persons` Limit 10", function (err, result, fields) {
+      if (err) throw err;
+      res.send(result)
+    });
+  }
 }
-
-module.exports = getPersons
