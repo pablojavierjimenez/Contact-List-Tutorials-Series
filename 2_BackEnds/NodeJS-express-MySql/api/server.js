@@ -1,6 +1,5 @@
 // @ts-nocheck
 const express = require('express');
-// const bodyParser = require('body-parser');
 const routes = require('./routes.js');
 const CONFIG = require('./config.js');
 
