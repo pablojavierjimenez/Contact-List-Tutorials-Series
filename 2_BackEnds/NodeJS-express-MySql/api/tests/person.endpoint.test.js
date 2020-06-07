@@ -2,7 +2,7 @@
 const request = require('supertest')
 const app = require('../server.js')
 
-let userId = 1;
+let userId = 16;
 const randomPhoneNumber = Math.floor(Math.random(13) * 1000000) + 951;
 
 describe('Person endpoint', () => {
@@ -45,5 +45,11 @@ describe('Person endpoint', () => {
       expect(res.statusCode).toEqual(200);
       expect(res.body[0].housePhone).toEqual(`001-0000000000`);
       expect(res.body[0].mobilePhone).toEqual(`999-${randomPhoneNumber}`);
+  });
+
+  it('should DELETE last created person', async () => {
+    const res = await request(app)
+      .delete(`/api/person/${userId}`)
+      expect(res.statusCode).toEqual(200);
   });
 });
