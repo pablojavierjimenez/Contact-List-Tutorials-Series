@@ -3,4 +3,4 @@ const CONFIG = require('./api/config.js');
 
 const port = CONFIG.PORT;
 
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(port, () => console.log(`App running on: http://localhost:7080/api`))
